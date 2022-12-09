@@ -1,0 +1,43 @@
+cmake_minimum_required(VERSION 3.24)
+
+# project name
+set(PROJECT_NAME "my_project")
+
+project(${PROJECT_NAME} VERSION 0.1.0)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# set custom exception flags
+set(CMAKE_CXX_FLAGS "-Weverything \
+-Wno-string-compare -Wno-c++98-compat -Wno-undefined-func-template \
+-fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all \
+")
+
+# explicit sources
+set (SOURCES 
+    main.cpp
+    others.cpp
+)
+
+#modules
+set (MODULES
+    "module1"
+    "module2"
+)
+
+set (INCLUDE_DIRS "")
+set (SOURCES "")
+
+foreach (Module ${Modules})
+  list(APPEND INCLUDE_DIRS "src/${Module}")
+  file(GLOB cpp_sources "src/${Module}/*.cpp")
+  list(APPEND SOURCES ${cpp_sources})
+endforeach()
+
+add_executable(${PROJECT_NAME} ${SOURCES})
+include_directories(${INCLUDE_DIRS})
+
+
+
+target_link_libraries(Graph "/home/enrique/Documents/POO2/utils/libutils.a")
