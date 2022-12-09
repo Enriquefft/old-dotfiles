@@ -1,0 +1,13 @@
+[user]
+	email = enriquefft2001@gmail.com
+	user = Enriquefft
+	name = Enriquefft
+[init]
+	defaultBranch = main
+[core]
+  pager = bat
+  excudesfile = ~/.config/git/.gitignore_global
+[diff]
+  tool = nvimdiff
+[merge]
+  tool = nvimdiff

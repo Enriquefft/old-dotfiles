@@ -1,0 +1,13 @@
+$pdf_previewer = 'firefox';
+
+# Generate pdf using lualatex (requires latexmk v4.51 or later)
+$pdf_mode = 4;
+$postscript_mode = 0;
+$dvi_mode = 0;
+
+# Requires xdotool & X11
+# Dynamically change window name
+$compiling_cmd = "xdotool search --name \"%D\" set_window --name \"%D compiling\"";
+$success_cmd   = "xdotool search --name \"%D\" set_window --name \"%D OK\"";
+$warning_cmd   = "xdotool search --name \"%D\" ". "set_window --name \"%D CITE/REF ISSUE\"";
+$failure_cmd   = "xdotool search --name \"%D\" set_window --name \"%D FAILURE\"";
