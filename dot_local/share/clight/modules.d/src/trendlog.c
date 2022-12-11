@@ -1,6 +1,3 @@
-// EXTRACTED FROM
-// https://gist.github.com/NICHOLAS85/00dc1303abbfbd4ccb483be38366b42a
-
 #include <clight/public.h>
 #include <pwd.h>
 #include <stdlib.h>
