@@ -1,0 +1,42 @@
+neofetch
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+HISTFILE=~/.config/zsh/.histfile
+HISTSIZE=100
+SAVEHIST=1000
+
+setopt autocd extendedglob nomatch notify
+unsetopt beep
+
+bindkey -v
+
+# Download Znap, if it's not there yet.
+[[ -f ~/git/zsh-snap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/git/zsh-snap
+
+source ~/git/zsh-snap/znap.zsh
+
+# source only powerlevel10k.zsh-theme
+znap source romkatv/powerlevel10k powerlevel10k.zsh-theme
+
+znap source marlonrichert/zsh-autocomplete
+
+znap source zdharma-continuum/fast-syntax-highlighting
+
+# Misc aliases
+source ~/.config/zsh/.zsh_aliases
+# LS_COLORS
+source ~/.config/zsh/.zsh_ls_colors
+
+zstyle ':autocomplete:*' min-input 1  # characters (int)
+zstyle ':autocomplete:*' insert-unambiguous yes
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

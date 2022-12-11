@@ -1,0 +1,41 @@
+# Allow doas + alias
+alias doas="doas "
+
+# Colorize ls output
+alias ls="ls --color=auto"
+
+# Use v to open vim editor
+alias vim="nvim"
+alias vmi="nvim"
+alias vi="nvim"
+
+# Shortcut for usefull manteinance commands
+alias mant="systemctl --failed; echo '##################'; journalctl -p 3 -xb"
+
+# Use py instead of python
+alias py="python"
+
+# Correct dc to cd
+alias dc="cd"
+
+# Easy acces to: BIOS
+alias bios="systemctl reboot --firmware-setup"
+
+# Disable webcam
+alias camoff="modprobe -r uvcvideo"
+alias camon="modprobe uvcvideo"
+
+alias nvim="nvim --startuptime /tmp/nvim-startuptime"
+
+# Compile all
+alias     compile="clang++ -std=c++2b -Wall -Wextra -Wshadow -Wdouble-promotion -Wconversion -Wno-string-compare -ferror-limit=1 -g"
+alias compilemain="clang++ -std=c++2b -Wall -Wextra -Wshadow -Wdouble-promotion -Wconversion -g *.cpp -o main"
+
+alias vimdiff="nvim -d"
+
+# wifi from terminal
+alias con="nmcli connection up "
+
+# Kill spotifyd
+#alias kspot="killall spotifyd"
+
