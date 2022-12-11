@@ -485,3 +485,49 @@ cd
 cd .config/zsh
 ls
 vim .zshrc
+f
+l
+j
+chezmoi re-add
+cd .local/share/chezmoi
+ls
+ls
+ls Templates
+ls
+cd dot_config
+ls
+cd
+cd .config
+chezmoi add zsh
+ls
+cd
+ls
+chezmoi remove .zshrc
+ls
+cd .local/share/chezmoi
+ls
+chezmoi completion
+chezmoi data
+chezmoi unmanaged
+chezmoi re-add
+cd ~/.local/share/chezmoi
+ls
+ls -al
+rm dot_gitconfig dot_gitignore_global dot_zshenv
+ls
+tree
+chezmoi re-add
+chezmoi re-add
+chezmoi re-add
+chezmoi apply
+chezmoi re-add
+chezmoi update
+chezmoi re-add
+chezmoi merge-all
+ls
+cd
+chezmoi re-add
+chezmoi re-add .xinitrc
+chezmoi re-add .xinitrc
+chezmoi add .xinitrc
+chezmoi re-add
