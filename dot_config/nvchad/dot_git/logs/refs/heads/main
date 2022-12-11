@@ -1,8 +1,0 @@
-0000000000000000000000000000000000000000 74e374ef7be0dac71c8c7d6a16b4cc1b0ebcb2e5 Enriquefft <enriquefft2001@gmail.com> 1663610670 -0500	clone: from https://github.com/NvChad/NvChad
-74e374ef7be0dac71c8c7d6a16b4cc1b0ebcb2e5 462652f62c71881676f224357e71ab4d6306a577 Enriquefft <enriquefft2001@gmail.com> 1663614999 -0500	commit: tmp
-462652f62c71881676f224357e71ab4d6306a577 74e374ef7be0dac71c8c7d6a16b4cc1b0ebcb2e5 Enriquefft <enriquefft2001@gmail.com> 1663615016 -0500	reset: moving to HEAD~1
-74e374ef7be0dac71c8c7d6a16b4cc1b0ebcb2e5 6e49918614700fda75cc00bcf22b22704e5b0f0b Enriquefft <enriquefft2001@gmail.com> 1667612578 -0500	commit: tmp
-6e49918614700fda75cc00bcf22b22704e5b0f0b 74e374ef7be0dac71c8c7d6a16b4cc1b0ebcb2e5 Enriquefft <enriquefft2001@gmail.com> 1667612599 -0500	reset: moving to 74e374ef7be0dac71c8c7d6a16b4cc1b0ebcb2e5
-74e374ef7be0dac71c8c7d6a16b4cc1b0ebcb2e5 0611d5c5283f2b0af227c57209678eca7dc380dc Enriquefft <enriquefft2001@gmail.com> 1667612600 -0500	pull --set-upstream https://github.com/NvChad/NvChad main --rebase: Fast-forward
-0611d5c5283f2b0af227c57209678eca7dc380dc c6252937b207e40e72a6d646900c86ab4cd664a1 Enriquefft <enriquefft2001@gmail.com> 1668533844 -0500	pull --set-upstream https://github.com/NvChad/NvChad main --rebase: Fast-forward
-c6252937b207e40e72a6d646900c86ab4cd664a1 54b364932450706b7355818f01a929fd1a77861e Enriquefft <enriquefft2001@gmail.com> 1669145842 -0500	pull --set-upstream https://github.com/NvChad/NvChad main --rebase: Fast-forward
