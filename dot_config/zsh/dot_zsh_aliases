@@ -5,9 +5,12 @@ alias doas="doas "
 alias ls="ls --color=auto"
 
 # Use v to open vim editor
-alias vim="nvim"
-alias vmi="nvim"
-alias vi="nvim"
+#alias vim="nvim"
+#alias vmi="nvim"
+#alias vi="nvim"
+alias vim="lvim"
+alias vmi="lvim"
+alias vi="lvim"
 
 # Shortcut for usefull manteinance commands
 alias mant="systemctl --failed; echo '##################'; journalctl -p 3 -xb"

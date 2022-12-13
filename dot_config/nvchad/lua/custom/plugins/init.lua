@@ -18,7 +18,6 @@ return {
       }
     end,
   },
-
   ["williamboman/mason.nvim"] = {
     override_options = {
       ensure_installed = {
