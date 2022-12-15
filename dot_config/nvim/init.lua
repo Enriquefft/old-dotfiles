@@ -1,1 +1,2 @@
-require "lua.impatient"
+require "startUp"
+require "plugins"
