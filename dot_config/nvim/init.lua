@@ -1,2 +1,0 @@
-require "startUp"
-require "plugins"
