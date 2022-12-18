@@ -32,11 +32,14 @@
 
 ### Ui
 - [alpha-nvim] (https://github.com/goolord/alpha-nvim)
-- [bufferline.nvim] (https://github.com/akinsho/bufferline.nvim)
 - [indent-blankline.nvim] (https://github.com/lukas-reineke/indent-blankline.nvim)
 - [lualine.nvim] (https://github.com/nvim-lualine/lualine.nvim)
 - [nvim-web-devicons] (https://github.com/nvim-tree/nvim-web-devicons)
 - [nvim-colorizer.lua] (https://github.com/norcalli/nvim-colorizer.lua)
+
+### Bufferline
+- [nvim-bufdel] (https://github.com/ojroques/nvim-bufdel)
+- [bufferline.nvim] (https://github.com/akinsho/bufferline.nvim)
 - [nvim-navic] (https://github.com/SmiteshP/nvim-navic)
 
 ### Themes

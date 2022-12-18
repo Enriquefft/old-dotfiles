@@ -16,6 +16,11 @@ vim.g.mapleader = " "
 --   term_mode         = "t",
 --   command_mode      = "c",
 
+-- Prefixes
+--   leader <leader>   = " " (space)
+--   meta   <M- >      = alt
+--   super  <D- >      = super (windows)
+
 ------------ Normal ------------
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -44,7 +49,7 @@ keymap("v", "p", '"_dP', opts)
 
 ------------ Insert ------------
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "jk", "<ESC>", opts) -- Caps-> Esc ftw
 
 ------------ Visual ------------
 -- Stay in indent mode
@@ -52,6 +57,14 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 ------------ Plugins ------------
+
+-- Toggle_Term
+keymap("n", "<M-1>", ":ToggleTerm direction=float<CR>", opts)
+keymap("n", "<M-2>", ":ToggleTerm direction=horizontal<CR>", opts)
+keymap("n", "<M-3>", ":ToggleTerm direction=vertical<CR>", opts)
+keymap("t", "<M-1>", ":ToggleTerm direction=float<CR>", opts)
+keymap("t", "<M-2>", ":ToggleTerm direction=horizontal<CR>", opts)
+keymap("t", "<M-3>", "[[:ToggleTerm direction=vertical<CR>]]", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

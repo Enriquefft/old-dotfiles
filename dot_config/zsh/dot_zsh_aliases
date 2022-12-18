@@ -5,12 +5,10 @@ alias doas="doas "
 alias ls="ls --color=auto"
 
 # Use v to open vim editor
-#alias vim="nvim"
-#alias vmi="nvim"
-#alias vi="nvim"
-alias vim="lvim"
-alias vmi="lvim"
-alias vi="lvim"
+alias vim="nvim"
+alias vmi="nvim"
+alias vi="nvim"
+alias ivm="nvim"
 
 # Shortcut for usefull manteinance commands
 alias mant="systemctl --failed; echo '##################'; journalctl -p 3 -xb"
@@ -38,6 +36,9 @@ alias vimdiff="nvim -d"
 
 # wifi from terminal
 alias con="nmcli connection up "
+
+# Airplane mode
+alias airplane="nmcli radio wifi off; nmcli radio bluetooth off; nmcli radio wwan off"
 
 # Kill spotifyd
 #alias kspot="killall spotifyd"

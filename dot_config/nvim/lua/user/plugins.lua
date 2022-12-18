@@ -27,35 +27,39 @@ return packer.startup(function(use)
 
   ------------ CORE ------------
   use "hrsh7th/nvim-cmp" -- Autocompletion
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
-  use "hrsh7th/cmp-path"
-  use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-buffer" -- Buffer completion
+  use "hrsh7th/cmp-nvim-lsp" -- LSP completion
+  use "hrsh7th/cmp-nvim-lua" -- Nvim config completion
+  use "hrsh7th/cmp-path" -- Path completion
+  use "saadparwaiz1/cmp_luasnip" -- Bridge plugin
 
   ------------ LSP ------------
-  use "williamboman/mason.nvim" -- LSP manager
-  use "williamboman/mason-lspconfig.nvim" -- LSP manager
   use "neovim/nvim-lspconfig" -- LSP configuration
-  use "b0o/SchemaStore.nvim" -- LSP schemas
-  use "jose-elias-alvarez/null-ls.nvim" -- LSP null-ls
+  use "williamboman/mason.nvim" -- LSP manager
+  use "williamboman/mason-lspconfig.nvim" -- Bridge plugin
+  use "b0o/SchemaStore.nvim" -- Json schemas
+  use "jose-elias-alvarez/null-ls.nvim" -- LSP null-ls (linter, formatter, etc)
 
   ------------ Copilot ------------
   use "zbirenbaum/copilot.lua" -- Copilot
-  use "zbirenbaum/copilot-cmp" -- Copilot
+  use "zbirenbaum/copilot-cmp" -- Copilot bridge
 
   ------------ Snippets ------------
-  use "rafamadriz/friendly-snippets" -- Snippets
-  use "L3MON4D3/LuaSnip" -- Snippets
+  use "L3MON4D3/LuaSnip" -- Snippets engine
+  use "rafamadriz/friendly-snippets" -- Snippets collection
 
   ------------ Ui ------------
   use "goolord/alpha-nvim" -- initial screen
-  use "akinsho/bufferline.nvim" -- Bufferline
   use "lukas-reineke/indent-blankline.nvim" -- Indentation line
   use "nvim-lualine/lualine.nvim" -- Statusline
   use "nvim-tree/nvim-web-devicons" -- Icons
   use "norcalli/nvim-colorizer.lua" -- Colorizer
+
+
+  ------------ BufferLine ------------
+  use "akinsho/bufferline.nvim" -- Bufferline
   use "SmiteshP/nvim-navic" -- Navigation in Bufferline
+  use "ojroques/nvim-bufdel" -- Better removal of buffers
 
   ------------ Themes ------------
   use "ishan9299/nvim-solarized-lua" -- Solarized theme
@@ -63,11 +67,23 @@ return packer.startup(function(use)
 
   ------------ Telescope ------------
   use "nvim-telescope/telescope.nvim" -- Telescope
-  use "nvim-tree/nvim-tree.lua" -- File explorer
-  use "nvim-telescope/telescope-fzf-native.nvim" -- Telescope fzf
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 
   ------------ Treesitter ------------
-  use "nvim-treesitter/nvim-treesitter" -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
   use "windwp/nvim-autopairs" -- Autopairs
   use "windwp/nvim-ts-autotag" -- Auto close html tags
   use "p00f/nvim-ts-rainbow" -- Rainbow parentheses
@@ -94,7 +110,7 @@ return packer.startup(function(use)
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
-    require("packer").sync()
+    packer.sync()
 
   end
 end)

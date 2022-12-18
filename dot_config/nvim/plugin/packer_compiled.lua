@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/enrique/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
+  ["nvim-bufdel"] = {
+    loaded = true,
+    path = "/home/enrique/.local/share/nvim/site/pack/packer/start/nvim-bufdel",
+    url = "https://github.com/ojroques/nvim-bufdel"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/enrique/.local/share/nvim/site/pack/packer/start/nvim-cmp",
