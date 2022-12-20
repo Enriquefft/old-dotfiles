@@ -42,4 +42,3 @@ alias airplane="nmcli radio wifi off; nmcli radio bluetooth off; nmcli radio wwa
 
 # Kill spotifyd
 #alias kspot="killall spotifyd"
-
