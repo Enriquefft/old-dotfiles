@@ -2,8 +2,8 @@
 
 ### Core
 - [packer.nvim] (https://github.com/wbthomason/packer.nvim)
-- [plenary.nvim] (https://github.com/nvim-lua/plenary.nvim)
 - [impatient.nvim] (https://github.com/lewis6991/impatient.nvim)
+- [plenary.nvim] (https://github.com/nvim-lua/plenary.nvim)
 - [project.nvim] (https://github.com/ahmedkhalf/project.nvim)
 - [toggleterm.nvim] (https://github.com/akinsho/toggleterm.nvim)
 
@@ -15,12 +15,23 @@
 - [cmp-path] (https://github.com/hrsh7th/cmp-path)
 - [cmp\_luasnip] (https://github.com/saadparwaiz1/cmp_luasnip)
 
-### LSP
+### Mason
 - [mason.nvim] (https://github.com/williamboman/mason.nvim)
 - [mason-lspconfig.nvim] (https://github.com/williamboman/mason-lspconfig.nvim)
+- [mason-null-ls.nvim] (https://github.com/jay-babu/mason-null-ls.nvim)
+- [mason-nvim-dap.nvim] (https://github.com/jay-babu/mason-nvim-dap.nvim)
+- [mason-update-all] (https://github.com/RubixDev/mason-update-all)
+
+### LSP
 - [nvim-lspconfig] (https://github.com/neovim/nvim-lspconfig)
 - [schemastore.nvim] (https://github.com/b0o/SchemaStore.nvim)
+
+### Null-Ls
 - [null-ls.nvim] (https://github.com/jose-elias-alvarez/null-ls.nvim)
+
+### Dap (debugging)
+- [nvim-dap] (https://github.com/mfussenegger/nvim-dap)
+- [nvim-dap-ui] (https://github.com/rcarriga/nvim-dap-ui)
 
 ### Copilot
 - [copilot.lua] (https://github.com/zbirenbaum/copilot.lua)
@@ -48,8 +59,8 @@
 
 ### telescope
 - [telescope.nvim] (https://github.com/nvim-telescope/telescope.nvim)
-- [nvim-tree.lua] (https://github.com/nvim-tree/nvim-tree.lua)
 - [telescope-fzf-native.nvim] (https://github.com/nvim-telescope/telescope-fzf-native.nvim)
+- [nvim-tree.lua] (https://github.com/nvim-tree/nvim-tree.lua)
 
 ### Treesitter
 - [nvim-treesitter] (https://github.com/nvim-treesitter/nvim-treesitter)
@@ -61,10 +72,6 @@
 
 ### Git
 - [gitsigns.nvim] (https://github.com/lewis6991/gitsigns.nvim)
-
-### Dap (debugging)
-- [nvim-dap] (https://github.com/mfussenegger/nvim-dap)
-- [nvim-dap-ui] (https://github.com/rcarriga/nvim-dap-ui)
 
 ### Language additionals
 - [markdown-preview.nvim] (https://github.com/iamcco/markdown-preview.nvim)

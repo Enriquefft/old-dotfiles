@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.diagnostics.disable": [
+        "unused-local"
+    ],
+    "Lua.diagnostics.globals": [
+        "vim",
+        "lvim",
+        "packer_plugins",
+        "reload",
+        "opts"
+    ]
+}

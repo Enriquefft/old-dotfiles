@@ -25,7 +25,7 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim" -- Project management
   use "akinsho/toggleterm.nvim" -- Terminal management
 
-  ------------ CORE ------------
+  ------------ CMP ------------
   use "hrsh7th/nvim-cmp" -- Autocompletion
   use "hrsh7th/cmp-buffer" -- Buffer completion
   use "hrsh7th/cmp-nvim-lsp" -- LSP completion
@@ -33,16 +33,37 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- Path completion
   use "saadparwaiz1/cmp_luasnip" -- Bridge plugin
 
-  ------------ LSP ------------
-  use "neovim/nvim-lspconfig" -- LSP configuration
+  ------------ Mason ------------
   use "williamboman/mason.nvim" -- LSP manager
   use "williamboman/mason-lspconfig.nvim" -- Bridge plugin
+  use "jay-babu/mason-null-ls.nvim" -- Bridge plugin
+  use "jay-babu/mason-nvim-dap.nvim" -- Bridge plugin
+  use 'RubixDev/mason-update-all' -- Simple command
+
+  ------------ LSP ------------
+  use "neovim/nvim-lspconfig" -- LSP configuration
   use "b0o/SchemaStore.nvim" -- Json schemas
+
+  ------------ Null-Ls ------------
   use "jose-elias-alvarez/null-ls.nvim" -- LSP null-ls (linter, formatter, etc)
 
+  ------------ Dap ------------
+  use "mfussenegger/nvim-dap" -- Dap
+  use "rcarriga/nvim-dap-ui" -- Dap ui
+
   ------------ Copilot ------------
-  use "zbirenbaum/copilot.lua" -- Copilot
-  use "zbirenbaum/copilot-cmp" -- Copilot bridge
+  use {
+    "zbirenbaum/copilot.lua",
+    event = "VimEnter",
+    config = function()
+      vim.defer_fn(function()
+        require("user.copilot")
+      end, 100)
+    end,
+  }
+  use { -- Copilot bridge
+    "zbirenbaum/copilot-cmp",
+  }
 
   ------------ Snippets ------------
   use "L3MON4D3/LuaSnip" -- Snippets engine
@@ -92,10 +113,6 @@ return packer.startup(function(use)
 
   ------------ Git ------------
   use "lewis6991/gitsigns.nvim" -- Git signs
-
-  ------------ Dap ------------
-  use "mfussenegger/nvim-dap" -- Dap
-  use "rcarriga/nvim-dap-ui" -- Dap ui
 
   ------------ Languages Misc ------------
   use "iamcco/markdown-preview.nvim" -- Markdown preview
