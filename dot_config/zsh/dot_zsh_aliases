@@ -40,5 +40,8 @@ alias con="nmcli connection up "
 # Airplane mode
 alias airplane="nmcli radio wifi off; nmcli radio bluetooth off; nmcli radio wwan off"
 
+# never use rm
+alias rm="echo 'dont use me, use rmw instead'"
+
 # Kill spotifyd
 #alias kspot="killall spotifyd"

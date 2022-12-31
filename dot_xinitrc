@@ -7,15 +7,15 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # merge in defaults and keymaps
 
-if [ -f $sysresources ]; then
+if [ -f "$sysresources" ]; then
 
-    xrdb -merge $sysresources
+    xrdb -merge "$sysresources"
 
 fi
 
-if [ -f $sysmodmap ]; then
+if [ -f "$sysmodmap" ]; then
 
-    xmodmap $sysmodmap
+    xmodmap "$sysmodmap"
 
 fi
 
@@ -45,4 +45,13 @@ setxkbmap -model acer_laptop -layout latam -option caps:swapescape
 # compositor
 picom &
 
-exec i3
+# Here i3 is kept as default
+session=${1:-i3}
+
+case $session in
+    i3|i3wm           ) exec i3;;
+    sway               ) exec sway;;
+    xfce|xfce4        ) exec startxfce4;;
+    # No known session, try to run it as command
+    *                 ) exec "$1";;
+esac
