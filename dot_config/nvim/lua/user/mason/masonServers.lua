@@ -31,6 +31,7 @@ local null_sources = {
 	"stylua",
 	"black",
 	"shellharden",
+	"shellcheck",
 	--"sql_formatter",
 	--
 	"gersemi",
