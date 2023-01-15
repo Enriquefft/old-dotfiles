@@ -1,0 +1,37 @@
+CompileFlags:
+    Add:
+        - "Weverything"
+---
+If:
+    PathExclude: [.*\.c]
+CompileFlags:
+    compiler: clang++
+    Add:
+        - "-std=c++2b"
+        - "Wno-c++98-compat"
+        - "Wno-c++98-compat-pedantic"
+Diagnostics:
+  ClangTidy:
+    Add: 
+      [
+      bugprone*
+      cert*
+      clang-analyzer*
+      concurrency*
+      cppcoreguidelines*
+      google*
+      hicpp*
+      misc*
+      modernize*
+      performance* 
+      readability*
+      ]
+    Remove: [modernize-use-trailing-return-type]
+    CheckOptions:
+      readability-identifier-naming.VariableCase: lower_case
+      readability-identifier-naming.ClassCase: CamelCase
+      readability-identifier-naming.ConstantCase: UPPER_CASE
+      readability-identifier-naming.FunctionCase: CamelCase
+      readability-identifier-naming.MethodCase: camelBack
+      readability-identifier-naming.ParameterCase: camelBack
+  UnusedIncludes: Strict
