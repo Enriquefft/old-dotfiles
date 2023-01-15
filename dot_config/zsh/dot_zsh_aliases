@@ -1,5 +1,7 @@
 # Allow doas + alias
 alias doas="doas "
+alias sudo='doas'
+alias sudoedit='doas nvim'
 
 # Colorize ls output
 alias ls="ls --color=auto"
