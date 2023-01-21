@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	------------ Dap ------------
 	use("mfussenegger/nvim-dap") -- Dap
 	use("rcarriga/nvim-dap-ui") -- Dap ui
+	use("mfussenegger/nvim-dap-python")
 
 	------------ Copilot ------------
 	use({
@@ -113,7 +114,14 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- Git signs
 
 	------------ Languages Misc ------------
-	use("iamcco/markdown-preview.nvim") -- Markdown preview
+	-- Markdown without yarn or npm
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
+
 	use("rest-nvim/rest.nvim") -- Rest client
 
 	------------ Misc ------------

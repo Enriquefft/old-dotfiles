@@ -31,7 +31,7 @@ alias camon="modprobe uvcvideo"
 alias nvim="nvim --startuptime /tmp/nvim-startuptime"
 
 # Compile all
-alias     compile="clang++ -std=c++2b -Wall -Wextra -Wshadow -Wdouble-promotion -Wconversion -Wno-string-compare -ferror-limit=1 -g"
+alias     compile="clang++ -std=c++2b -Weverything -Wno-string-compare -ferror-limit=1 -fsanitize=address -g"
 alias compilemain="clang++ -std=c++2b -Wall -Wextra -Wshadow -Wdouble-promotion -Wconversion -g *.cpp -o main"
 
 alias vimdiff="nvim -d"
@@ -44,6 +44,9 @@ alias airplane="nmcli radio wifi off; nmcli radio bluetooth off; nmcli radio wwa
 
 # never use rm
 alias rm="echo 'dont use me, use rmw instead'"
+
+# Pretty view for csv-like files
+alias csv="visidata"
 
 # Kill spotifyd
 #alias kspot="killall spotifyd"

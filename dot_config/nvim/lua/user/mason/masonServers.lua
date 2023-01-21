@@ -5,17 +5,17 @@ local lsp_sources = {
 	--"asm_lsp",
 	--"awk_ls",
 	"bashls",
-	"clangd",
+	"clangd", -- Already installed
 	"neocmake",
 	--"cssls",
 	--"cssmodules_ls",
-	--"dotls",
+	"dotls",
 	--"emmet_ls",
 	--"eslint",
 	--"graphql",
 	--"html",
 	"jsonls",
-	--"yamlls",
+	"yamlls",
 	"ltex",
 	"pylsp",
 	--"r_language_server",
@@ -39,7 +39,10 @@ local null_sources = {
 	"cmake_lint",
 }
 
-local dap_sources = {}
+local dap_sources = {
+	"cppdbg",
+	"python",
+}
 
 return {
 	lsp_sources = lsp_sources,

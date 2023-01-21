@@ -1,15 +1,15 @@
 CompileFlags:
-    Add:
-        - "Weverything"
+    Add: [-Weverything]
 ---
 If:
-    PathExclude: [.*\.c]
+    PathExclude: .*\.c
 CompileFlags:
     compiler: clang++
     Add:
-        - "-std=c++2b"
-        - "Wno-c++98-compat"
-        - "Wno-c++98-compat-pedantic"
+        - -std=c++2b
+        - -Wno-c++98-compat
+        - -Wno-c++98-compat-pedantic
+        - -fsanitize=address
 Diagnostics:
   ClangTidy:
     Add: 
