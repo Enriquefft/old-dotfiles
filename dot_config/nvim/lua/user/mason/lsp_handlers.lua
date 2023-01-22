@@ -34,10 +34,9 @@ return {
 							enabled = false,
 							convention = "google",
 						},
-						pyls_mypy = {
+						pylsp_mypy = {
 							enabled = true,
 							live_mode = true,
-							strict = true,
 						},
 					},
 				},
